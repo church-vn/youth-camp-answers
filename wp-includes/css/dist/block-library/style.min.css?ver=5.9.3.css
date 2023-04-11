@@ -32,3 +32,7 @@ a#button_registration {
   height: 700px;
 
 }
+
+* {
+  scroll-behavior: smooth !important;
+}
