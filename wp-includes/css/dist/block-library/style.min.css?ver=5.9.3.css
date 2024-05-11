@@ -17,7 +17,8 @@
   /* main style */
 a#button_registration {
   color: white !important;
-  background-color: black !important;
+  background-color: black; !important;
+  opacity: 0.7;
   }
   a#button_registration:hover {
     opacity: 0.7;
