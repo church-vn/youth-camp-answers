@@ -750,11 +750,30 @@ div.WordSection1
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
  </o:shapelayout></xml><![endif]-->
+    <link rel='stylesheet' id='wp-block-library-css'  href='../wp-includes/css/dist/block-library/style.min.css%3Fver=5.9.3.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css'  href='../wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css%3Fver=5.15.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='../wp-content/plugins/elementor/assets/css/frontend-lite.min.css%3Fver=3.6.5.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-7-css'  href='../wp-content/uploads/elementor/css/post-7.css%3Fver=1652777917.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='../wp-content/uploads/elementor/css/global.css%3Fver=1652777942.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-5-css'  href='../wp-content/uploads/elementor/css/post-5.css%3Fver=1681139773.css' type='text/css' media='all' />
+<link rel='stylesheet' id='carousel-slider-frontend-v2-css'  href='../wp-content/plugins/carousel-slider/assets/css/frontend-v2.css%3Fver=2.2.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css%3Fver=5.15.3.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css%3Fver=5.15.3.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css%3Fver=5.15.3.css' type='text/css' media='all' />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 
-<body lang=RU style='tab-interval:35.4pt;word-wrap:break-word'>
 
-<div class=WordSection1>
+<body lang=RU style='tab-interval:35.4pt;word-wrap:break-word'>
+    
+
+<div id="content" class=WordSection1>
+    <div style="margin-bottom: 20px !important;" class="wp-block-button is-style-secondary"><a style="margin-top: 20px;" class="wp-block-button__link" id="cmd" href="" rel="noopener">Скачать PDF</a>
+        <a style="margin-top: 20px; font-size: 0.97rem" class="wp-block-button__link" id="button_registration" href="javascript:(print());" rel="noopener">Печать &#128424;</a>
+    </div>
+
+
 
 <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center'><span
 style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
@@ -1060,7 +1079,22 @@ style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman",serif'>22
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
 </div>
-
+<div id="editor"></div>
 </body>
+<script>
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
 
+$('#cmd').click(function () {
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+</script>
 </html>
