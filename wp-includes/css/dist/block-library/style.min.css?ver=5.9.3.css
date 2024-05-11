@@ -33,7 +33,7 @@ a#button_registration {
 
 }
 @media screen and (max-width: 768px) {
-	#anchor_quanity {
+	.main_table {
 		height: 70vh !important;
 /*		padding: 0 5% 0 5% !important;*/
 	}
