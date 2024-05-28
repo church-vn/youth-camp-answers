@@ -760,32 +760,7 @@ div.WordSection1
 <link rel='stylesheet' id='elementor-icons-shared-0-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css%3Fver=5.15.3.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css%3Fver=5.15.3.css' type='text/css' media='all' />
 <link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css%3Fver=5.15.3.css' type='text/css' media='all' />
-    <script
-  src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-  crossorigin="anonymous"></script>
-    <script src="../wp-includes/js/jspdf.min.js"></script>
-    <script src="../wp-includes/js/html2canvas.js"></script>
-    <script>
-function getPDF() {
-  doCanvas();
-}
-
-function doCanvas() {
-  html2canvas(document.querySelector("#myDiv")).then(canvas => {
-    doPDF(canvas);
-  });
-
-}
-
-function doPDF(canvas) {
-  var doc = new jsPDF({
-    format: 'a4',
-  });
-  doc.addImage(canvas.toDataURL(), 'PNG', 0, 0);
-  doc.save('test.pdf');
-}
-    </script>
+    
 </head>
 
 
@@ -793,7 +768,7 @@ function doPDF(canvas) {
     
 
 <div class=WordSection1>
-    <div style="margin-bottom: 20px !important;" class="wp-block-button is-style-secondary"><a style="margin-top: 20px;" class="wp-block-button__link" onclick="getPDF()" href="" rel="noopener">Скачать PDF</a>
+    <div style="margin-bottom: 20px !important;" class="wp-block-button is-style-secondary"><a style="margin-top: 20px;" class="wp-block-button__link" href="#" rel="noopener">Скачать PDF</a>
         <a style="margin-top: 20px; font-size: 0.97rem" class="wp-block-button__link" id="button_registration" href="javascript:(print());" rel="noopener">Печать &#128424;</a>
     </div>
 
@@ -1103,5 +1078,6 @@ style='font-size:14.0pt;line-height:115%;font-family:"Times New Roman",serif'>22
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
 </div>
+
 </body>
 </html>
