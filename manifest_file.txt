@@ -1,0 +1,5 @@
+CACHE MANIFEST
+index.html
+Raspisanie_podrobnoe.html
+stylesheet.css
+https://church-vn.github.io/youth-camp-answers/Raspisanie_podrobnoe.html
