@@ -982,6 +982,7 @@ ul
 <div class=WordSection1>
      <div style="margin-bottom: 20px !important;" class="wp-block-button is-style-secondary">
         <a style="margin-top: 20px; color: white; text-decoration: none;" class="wp-block-button__link" href="javascript:history.back()" rel="noopener">Назад</a>
+        <button id="exportButton">generate pdf</button>
     </div>
 
 <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center'><a
@@ -1841,7 +1842,14 @@ normal'><span style='font-size:14.0pt;line-height:115%;font-family:"Times New Ro
 font-family:"Times New Roman",serif'><o:p></o:p></span></p>
 
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+ function exportHTMLtoPDF() {
+            let htmlElement = document.getElementById('content_pdf');
+            html2pdf().from(htmlElement).save('exported_file.pdf');
+        }
+        document.getElementById('exportButton').addEventListener('click', exportHTMLtoPDF);
+</script>
 </body>
 
 </html>
