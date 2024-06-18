@@ -977,12 +977,12 @@ ul
 <link rel='stylesheet' id='elementor-icons-fa-regular-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css%3Fver=5.15.3.css' type='text/css' media='all' />
 </head>
 
-<body id="content_pdf" lang=RU style='tab-interval:35.4pt;word-wrap:break-word'>
+<body id="content_pdf_main" lang=RU style='tab-interval:35.4pt;word-wrap:break-word'>
 
 <div class=WordSection1>
      <div style="margin-bottom: 20px !important;" class="wp-block-button is-style-secondary">
         <a style="margin-top: 20px; color: white; text-decoration: none;" class="wp-block-button__link" href="javascript:history.back()" rel="noopener">Назад</a>
-        <button id="exportButton">generate pdf</button>
+        <button id="exportButton_main">generate pdf</button>
     </div>
 
 <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center'><a
@@ -1845,10 +1845,10 @@ font-family:"Times New Roman",serif'><o:p></o:p></span></p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
  function exportHTMLtoPDF() {
-            let htmlElement = document.getElementById('content_pdf');
+            let htmlElement = document.getElementById('content_pdf_main');
             html2pdf().from(htmlElement).save('exported_file.pdf');
         }
-        document.getElementById('exportButton').addEventListener('click', exportHTMLtoPDF);
+        document.getElementById('exportButton_main').addEventListener('click', exportHTMLtoPDF);
 </script>
 </body>
 
