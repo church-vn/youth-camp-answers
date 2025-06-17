@@ -96,6 +96,17 @@ a#button_registration {
 
 
 
+/* Изображения в документах */
+
+@media screen and (max-width: 768px) {
+.WordSection1 img {
+	width: 100% !important;
+	height: auto !important;
+}
+	
+}
+
+
 
 
 
